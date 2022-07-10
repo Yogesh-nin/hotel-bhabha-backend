@@ -1,0 +1,33 @@
+{
+  "name": "hotel-bhabha-backend",
+  "version": "1.0.0",
+  "description": "backend for room booking",
+  "main": "index.js",
+  "scripts": {
+    "start": "babel-node index.js",
+    "dev": "nodemon --exec babel-node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/chandra-yogesh/hotel-bhabha-backend.git"
+  },
+  "author": "navdeep and yogesh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/chandra-yogesh/hotel-bhabha-backend/issues"
+  },
+  "homepage": "https://gitlab.com/chandra-yogesh/hotel-bhabha-backend#readme",
+  "dependencies": {
+    "@babel/cli": "^7.18.6",
+    "@babel/core": "^7.18.6",
+    "@babel/node": "^7.18.6",
+    "@babel/preset-env": "^7.18.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "helmet": "^5.1.0",
+    "mongoose": "^6.4.4",
+    "nodemon": "^2.0.19"
+  }
+}
