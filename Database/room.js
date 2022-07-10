@@ -3,22 +3,22 @@ import mongoose from "mongoose";
 const RoomSchema = new mongoose.Schema({
   name: {
     type: String,
-    required: [true, "Room Name is required"],
-    maxlength: [100, "Room name must be 100 charcter long"],
+    // required: [true, "Room Name is required"],
+    // maxlength: [100, "Room name must be 100 charcter long"],
   },
   pricePerNight: {
     type: Number,
-    required: [true, "Room Price is required"],
+    // required: [true, "Room Price is required"],
     default: 0.0,
   },
   description: {
     type: String,
-    required: [true, "Room Desc is required"],
+    // required: [true, "Room Desc is required"],
   },
 
   guestCapacity: {
     type: Number,
-    required: [true, "Room guest number is required"],
+    // required: [true, "Room guest number is required"],
   },
 
   internet: {
@@ -42,4 +42,4 @@ const RoomSchema = new mongoose.Schema({
   images: [{ public_id: { type: String }, url: { type: String } }],
 });
 
-export default RoomModel = mongoose.model("Room", RoomSchema);
+export const RoomModel = mongoose.model("Room", RoomSchema);
