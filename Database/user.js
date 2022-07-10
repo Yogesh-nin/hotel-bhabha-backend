@@ -36,18 +36,6 @@ const UserSchema = new mongoose.Schema({
     required: [true, "Enter your email"],
     unique: [true, "Email already exist"],
     trim: true,
-    // validate: function (value) {
-    //   var emailRegex = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
-    //   return emailRegex.test(value);
-    // },
-  },
-
-  type: {
-    type: String,
-  },
-
-  token: {
-    type: String,
   },
 });
 
