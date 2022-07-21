@@ -1,12 +1,40 @@
-// const mongoose = require("mongoose");
+import mongoose from "mongoose";
+const BookingSchema = new mongoose.Schema(
+  {
+    firstName: {
+      type: String,
+      required: true,
+      unique: true,
+    },
+    lastName: {
+      type: String,
+      required: true,
+      unique: true,
+    },
+    email: {
+      type: String,
+      required: true,
+      unique: true,
+    },
 
-// const BookingSchema = new mongoose.Schema({
-//   _bookingID: Schema.Types.ObjectId,
-//   user: { type: Schema.ObjectId, ref: "User" },
-//   bookingStart: { type: Date, required: true },
-//   bookingEnd: { type: Date, required: true },
-//   corporate: { type: Boolean },
-//   roomID: { type: Schema.ObjectId, ref: "Room" },
-// });
+    phone: {
+      type: String,
+    },
 
-// export const BookingModel = mongoose.model("Booking", BookingSchema);
+    totalGuest: {
+      type: Number,
+      required: true,
+    },
+    roomType: {
+      type: String,
+    },
+    totalBill: {
+      type: Number,
+      required: true,
+    },
+    datesBooked: [],
+  },
+  { timestamps: true }
+);
+
+export default mongoose.model("Booking", BookingSchema);

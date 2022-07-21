@@ -11,6 +11,7 @@ import ConnectDB from "./database/connection";
 import authRoute from "./Routes/auth";
 import roomRoute from "./Routes/rooms";
 import userRoute from "./Routes/user";
+import bookingRoute from "./Routes/booking";
 
 const bha_bha = express();
 
@@ -23,6 +24,7 @@ bha_bha.use(cookieParser());
 bha_bha.use("/api/auth", authRoute);
 bha_bha.use("/api/user", userRoute);
 bha_bha.use("/api/room", roomRoute);
+bha_bha.use("/api/booking", bookingRoute);
 
 bha_bha.use((err, req, res, next) => {
   const errorStatus = err.status || 500;
