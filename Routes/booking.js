@@ -4,6 +4,8 @@ import {
   getBooking,
   getBookings,
   deleteBooking,
+  createCartData,
+  createGuestDetails,
 } from "../controllers/bookingController";
 
 import { verifyAdmin } from "../utils/verifyToken.js";
@@ -11,6 +13,8 @@ import { verifyAdmin } from "../utils/verifyToken.js";
 const Router = express.Router();
 //CREATE
 Router.post("/", createBooking);
+Router.post("/cart", createCartData);
+Router.post("/guest", createGuestDetails);
 
 //DELETE
 Router.delete("/:id", deleteBooking);

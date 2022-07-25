@@ -1,36 +1,17 @@
 import mongoose from "mongoose";
 const BookingSchema = new mongoose.Schema(
   {
-    firstName: {
-      type: String,
-      required: true,
-      unique: true,
+    guestDetails: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "GuestDetails",
     },
-    lastName: {
-      type: String,
-      required: true,
-      unique: true,
-    },
-    email: {
-      type: String,
-      required: true,
-      unique: true,
+    cartData: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "CartData",
     },
 
-    phone: {
+    paymentID: {
       type: String,
-    },
-
-    totalGuest: {
-      type: Number,
-      required: true,
-    },
-    roomType: {
-      type: String,
-    },
-    totalBill: {
-      type: Number,
-      required: true,
     },
     datesBooked: [],
   },
