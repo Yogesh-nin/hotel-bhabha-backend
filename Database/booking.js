@@ -3,18 +3,16 @@ const BookingSchema = new mongoose.Schema(
   {
     firstName: {
       type: String,
-      required: true,
-      unique: true,
+      
+      
     },
     lastName: {
       type: String,
-      required: true,
-      unique: true,
+      
     },
     email: {
       type: String,
-      required: true,
-      unique: true,
+      
     },
 
     phone: {
@@ -23,14 +21,14 @@ const BookingSchema = new mongoose.Schema(
 
     totalGuest: {
       type: Number,
-      required: true,
+      
     },
     roomType: {
       type: String,
     },
     totalBill: {
       type: Number,
-      required: true,
+     
     },
     datesBooked: [],
   },
