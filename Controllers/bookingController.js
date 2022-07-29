@@ -1,13 +1,23 @@
 import Booking from "../Database/booking";
 import cartData from "../Database/cartData";
 import guestDetails from "../Database/guestDetails";
-
+import dateModel from "../Database/date";
 export const createBooking = async (req, res, next) => {
   const newBooking = new Booking(req.body);
   console.log(newBooking);
   try {
     const savedBooking = await newBooking.save();
     res.status(201).json(savedBooking);
+  } catch (error) {
+    next(error);
+  }
+};
+export const setDate = async (req, res, next) => {
+  const newDate = new dateModel(req.body);
+  console.log(newDate);
+  try {
+    const saveddate = await newDate.save();
+    res.status(201).json(saveddate);
   } catch (error) {
     next(error);
   }
