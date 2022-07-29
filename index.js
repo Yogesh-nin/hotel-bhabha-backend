@@ -1,16 +1,17 @@
-require("dotenv").config();
+// require("dotenv").config();
+import {} from 'dotenv/config'
 import express from "express";
 import cors from "cors";
 import helmet from "helmet";
 import cookieParser from "cookie-parser";
 
 //Database Connection
-import ConnectDB from "./database/connection";
+import ConnectDB from "./Database/connection.js";
 
 //route
-import authRoute from "./Routes/auth";
-import roomRoute from "./Routes/rooms";
-import userRoute from "./Routes/user";
+import authRoute from "./Routes/auth.js";
+import roomRoute from "./Routes/rooms.js";
+import userRoute from "./Routes/user.js";
 
 const bha_bha = express();
 

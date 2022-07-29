@@ -1,5 +1,5 @@
-import User from "../Database/user";
-import { createError } from "../utils/createError";
+import User from "../Database/user.js";
+import { createError } from "../utils/createError.js";
 import jwt from "jsonwebtoken";
 
 import bcrypt from "bcryptjs";
