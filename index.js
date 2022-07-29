@@ -6,7 +6,7 @@ import cookieParser from "cookie-parser";
 
 //Database Connection
 import ConnectDB from "./database/connection";
-
+const bodyparser = require('body-parser')
 //route
 import authRoute from "./Routes/auth";
 import roomRoute from "./Routes/rooms";
@@ -19,6 +19,8 @@ bha_bha.use(cors());
 bha_bha.use(express.json());
 bha_bha.use(helmet());
 bha_bha.use(cookieParser());
+bha_bha.use(bodyparser.urlencoded({extended:false}))
+bha_bha.use(bodyparser.json())
 
 //middleware
 bha_bha.use("/api/auth", authRoute);

@@ -1,11 +1,35 @@
 import Booking from "../Database/booking";
+import cartData from "../Database/cartData";
+import guestDetails from "../Database/guestDetails";
 
 export const createBooking = async (req, res, next) => {
   const newBooking = new Booking(req.body);
-
+  console.log(newBooking);
   try {
     const savedBooking = await newBooking.save();
     res.status(201).json(savedBooking);
+  } catch (error) {
+    next(error);
+  }
+};
+
+export const createCartData = async (req, res, next) => {
+  const newCartData = new cartData(req.body);
+  console.log(newCartData);
+  try {
+    const cart = await newCartData.save();
+    res.status(201).json(cart);
+  } catch (error) {
+    next(error);
+  }
+};
+
+export const createGuestDetails = async (req, res, next) => {
+  const newGuest = new guestDetails(req.body);
+
+  try {
+    const guest = await newGuest.save();
+    res.status(201).json(guest);
   } catch (error) {
     next(error);
   }
