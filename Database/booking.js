@@ -38,6 +38,31 @@ const BookingSchema = new mongoose.Schema(
     razorpay_payment_id: {
       type: String,
     },
+    dates: {
+      startDate: {
+          date: {
+              type: Number
+          },
+          month: {
+              type: Number
+          },
+          year: {
+              type: Number
+          }
+      },
+      endDate:
+      {
+          date: {
+              type: Number
+          },
+          month: {
+              type: Number
+          },
+          year: {
+              type: Number
+          },
+      }
+  }
 
   },
   { timestamps: true },

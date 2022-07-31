@@ -6,6 +6,7 @@ import {
   deleteBooking,
   createCartData,
   createGuestDetails,
+  setDate,
 } from "../controllers/bookingController.js";
 
 import { verifyAdmin } from "../utils/verifyToken.js";
@@ -15,7 +16,7 @@ const Router = express.Router();
 Router.post("/", createBooking);
 Router.post("/cart", createCartData);
 Router.post("/guest", createGuestDetails);
-
+Router.post("/date",setDate)
 //DELETE
 Router.delete("/:id", deleteBooking);
 //GET
