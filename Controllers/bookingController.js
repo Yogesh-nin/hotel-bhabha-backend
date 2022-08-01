@@ -1,7 +1,7 @@
-import Booking from "../Database/booking";
-import cartData from "../Database/cartData";
-import guestDetails from "../Database/guestDetails";
-import dateModel from "../Database/date";
+import Booking from "../database/booking";
+import cartData from "../database/cartData";
+import guestDetails from "../database/guestDetails";
+import dateModel from "../database/date";
 export const createBooking = async (req, res, next) => {
   const newBooking = new Booking(req.body);
   console.log(newBooking);

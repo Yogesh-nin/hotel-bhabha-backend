@@ -1,4 +1,4 @@
-import Room from "../Database/room";
+import Room from "../database/room";
 
 export const createRoom = async (req, res, next) => {
   const newRoom = new Room(req.body);

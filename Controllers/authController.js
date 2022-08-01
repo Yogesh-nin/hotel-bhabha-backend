@@ -1,4 +1,4 @@
-import User from "../Database/user";
+import User from "../database/user";
 import { createError } from "../utils/createError";
 import jwt from "jsonwebtoken";
 
